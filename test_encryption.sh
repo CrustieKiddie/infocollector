@@ -10,6 +10,7 @@
 
 set -euo pipefail
 
+
 # Colors
 readonly RED='\033[0;31m'
 readonly GREEN='\033[0;32m'
