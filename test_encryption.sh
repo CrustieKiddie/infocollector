@@ -149,7 +149,7 @@ test_encrypt_folder() {
     ((TESTS_RUN++))
     
     local test_folder="${TEST_DIR}/test_folder_1"
-    local encrypted_file="${test_folder}.klskv"
+    local encrypted_file="${test_folder}.anmy"
     
     if echo -e "${TEST_PASSWORD}\n${TEST_PASSWORD}" | \
        bash "${SCRIPT_DIR}/folder_encryptor.sh" encrypt "${test_folder}" &> /dev/null; then
@@ -167,7 +167,7 @@ test_encrypted_file_format() {
     print_test "Verifying encrypted file format"
     ((TESTS_RUN++))
     
-    local encrypted_file="${TEST_DIR}/test_folder_1.klskv"
+    local encrypted_file="${TEST_DIR}/test_folder_1.anmy"
     
     if [[ -f "${encrypted_file}" ]]; then
         # Check if file is binary (encrypted)
@@ -185,7 +185,7 @@ test_decrypt_folder() {
     print_test "Decrypting test folder"
     ((TESTS_RUN++))
     
-    local encrypted_file="${TEST_DIR}/test_folder_1.klskv"
+    local encrypted_file="${TEST_DIR}/test_folder_1.anmy"
     local decrypted_folder="${TEST_DIR}/test_folder_1"
     
     # Remove original if exists
@@ -235,7 +235,7 @@ test_wrong_password() {
     print_test "Testing wrong password rejection"
     ((TESTS_RUN++))
     
-    local encrypted_file="${TEST_DIR}/test_folder_1.klskv"
+    local encrypted_file="${TEST_DIR}/test_folder_1.anmy"
     local wrong_password="WrongPassword123"
     
     # Try to decrypt with wrong password
@@ -252,7 +252,7 @@ test_empty_folder() {
     ((TESTS_RUN++))
     
     local empty_folder="${TEST_DIR}/empty_folder"
-    local encrypted_file="${empty_folder}.klskv"
+    local encrypted_file="${empty_folder}.anmy"
     
     if echo -e "${TEST_PASSWORD}\n${TEST_PASSWORD}" | \
        bash "${SCRIPT_DIR}/folder_encryptor.sh" encrypt "${empty_folder}" &> /dev/null; then
@@ -370,7 +370,7 @@ test_large_folder_performance() {
         local end_time=$(date +%s)
         local duration=$((end_time - start_time))
         
-        if [[ -f "${large_folder}.klskv" ]]; then
+        if [[ -f "${large_folder}.anmy" ]]; then
             print_pass
             print_info "Encryption took ${duration} seconds"
         else
@@ -389,7 +389,7 @@ test_file_permissions() {
     print_test "Testing encrypted file permissions"
     ((TESTS_RUN++))
     
-    local encrypted_file="${TEST_DIR}/test_folder_1.klskv"
+    local encrypted_file="${TEST_DIR}/test_folder_1.anmy"
     
     if [[ -f "${encrypted_file}" ]]; then
         local perms=$(stat -c %a "${encrypted_file}" 2>/dev/null || stat -f %A "${encrypted_file}" 2>/dev/null)
