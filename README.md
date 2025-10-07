@@ -36,7 +36,7 @@ chmod +x install.sh
 folder-encrypt encrypt ~/Documents/Secret
 
 # 3. Decrypt a folder
-folder-encrypt decrypt ~/Documents/Secret.klskv
+folder-encrypt decrypt ~/Documents/Secret.anmy
 
 # 4. Interactive mode
 folder-encrypt interactive
@@ -75,7 +75,7 @@ folder-encrypt interactive
 folder-encrypt encrypt /path/to/folder
 
 # Decrypt a folder
-folder-encrypt decrypt /path/to/folder.klskv
+folder-encrypt decrypt /path/to/folder.anmy
 
 # List encrypted folders
 folder-encrypt list
@@ -188,7 +188,7 @@ folder-encrypt interactive
 mkdir ~/Secure_Backup
 cp -r ~/Important_Files ~/Secure_Backup/
 folder-encrypt encrypt ~/Secure_Backup
-cp ~/Secure_Backup.klskv /media/usb/
+cp ~/Secure_Backup.anmy /media/usb/
 ```
 
 ## 🗑️ Uninstallation
