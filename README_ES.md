@@ -14,7 +14,7 @@ Sistema completo y profesional de encriptación de carpetas para Linux que utili
 - 📊 **Sistema de Logs**: Registro completo de todas las operaciones
 - 🔄 **Modo Interactivo**: Menú fácil de usar para todas las operaciones
 - 📝 **Gestión de Carpetas**: Lista y administra todas las carpetas encriptadas
-- 🛡️ **Extensión Personalizada**: Archivos encriptados con extensión `.klskv`
+- 🛡️ **Extensión Personalizada**: Archivos encriptados con extensión `.anmy`
 
 ## 🎯 Casos de Uso
 
@@ -124,7 +124,7 @@ Confirm password: ********
 [INFO] Creating archive...
 [INFO] Encrypting archive with aes-256-cbc...
 [SUCCESS] Folder encrypted successfully!
-[INFO] Encrypted file: /home/user/Documentos/Confidencial.klskv
+[INFO] Encrypted file: /home/user/Documentos/Confidencial.anmy
 Remove original folder? (y/N):
 ```
 
@@ -132,17 +132,17 @@ Remove original folder? (y/N):
 
 ```bash
 # Modo interactivo
-folder-encrypt decrypt /ruta/a/carpeta.klskv
+folder-encrypt decrypt /ruta/a/carpeta.anmy
 
 # Especificar directorio de salida
-folder-encrypt decrypt /ruta/a/carpeta.klskv -o /ruta/destino
+folder-encrypt decrypt /ruta/a/carpeta.anmy -o /ruta/destino
 ```
 
 **Ejemplo:**
 ```bash
-$ folder-encrypt decrypt ~/Documentos/Confidencial.klskv
+$ folder-encrypt decrypt ~/Documentos/Confidencial.anmy
 Enter password: ********
-[INFO] Starting decryption of: /home/user/Documentos/Confidencial.klskv
+[INFO] Starting decryption of: /home/user/Documentos/Confidencial.anmy
 [INFO] Decrypting archive...
 [INFO] Extracting archive...
 [SUCCESS] Folder decrypted successfully!
@@ -162,12 +162,12 @@ folder-encrypt list
 ═══════════════════════════════════════════════════════════════
 
 [1] ✓
-    Encrypted: /home/user/Documentos/Confidencial.klskv
+    Encrypted: /home/user/Documentos/Confidencial.anmy
     Original:  /home/user/Documentos/Confidencial
     Date:      2024-01-15 10:30:45
 
 [2] ✓
-    Encrypted: /home/user/Proyectos/Secreto.klskv
+    Encrypted: /home/user/Proyectos/Secreto.anmy
     Original:  /home/user/Proyectos/Secreto
     Date:      2024-01-15 11:20:30
 
@@ -236,7 +236,7 @@ readonly PBKDF2_ITERATIONS=100000       # Aumentar para más seguridad
 ### Personalizar Extensión de Archivos
 
 ```bash
-readonly EXTENSION=".klskv"  # Cambiar a tu extensión preferida
+readonly EXTENSION=".anmy"  # Cambiar a tu extensión preferida
 ```
 
 ## 🔐 Seguridad
@@ -321,11 +321,11 @@ journalctl --user -u folder-decrypt-startup.service
    folder-encrypt list
    ```
 
-2. Verificar que los archivos `.klskv` existan
+2. Verificar que los archivos `.anmy` existan
 
 3. Probar desencriptación manual:
    ```bash
-   folder-encrypt decrypt /ruta/archivo.klskv
+   folder-encrypt decrypt /ruta/archivo.anmy
    ```
 
 ## 📊 Ejemplos de Uso Completos
@@ -377,7 +377,7 @@ cp -r ~/Documentos/Importantes ~/Backup_Seguro/
 folder-encrypt encrypt ~/Backup_Seguro
 
 # 4. Copiar archivo encriptado a USB o nube
-cp ~/Backup_Seguro.klskv /media/usb/
+cp ~/Backup_Seguro.anmy /media/usb/
 ```
 
 ## 🔄 Actualización
