@@ -21,7 +21,7 @@ A complete and professional folder encryption system for Linux using **OpenSSL A
 - 📊 **Logging System**: Complete audit trail of all operations
 - 🔄 **Interactive Mode**: Easy-to-use menu for all operations
 - 📝 **Folder Management**: List and manage all encrypted folders
-- 🛡️ **Custom Extension**: Encrypted files with `.klskv` extension
+- 🛡️ **Custom Extension**: Encrypted files with `.anmy` extension
 
 ## 🚀 Quick Start
 
