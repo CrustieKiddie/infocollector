@@ -50,7 +50,7 @@ folder-encrypt interactive
 
 ```bash
 # Método 1: Comando directo
-folder-encrypt decrypt ~/Documentos/MiCarpetaSecreta.klskv
+folder-encrypt decrypt ~/Documentos/MiCarpetaSecreta.anmy
 
 # Método 2: Modo interactivo
 folder-encrypt interactive
@@ -142,7 +142,7 @@ folder-encrypt interactive
 folder-encrypt encrypt /ruta/carpeta
 
 # Desencriptar archivo
-folder-encrypt decrypt /ruta/archivo.klskv
+folder-encrypt decrypt /ruta/archivo.anmy
 
 # Ver lista de carpetas encriptadas
 folder-encrypt list
@@ -226,13 +226,13 @@ systemctl --user enable folder-decrypt-startup.service
 3. **Mantener backups**
    ```bash
    # Copiar archivos encriptados a USB
-   cp ~/Documentos/*.klskv /media/usb/backup/
+   cp ~/Documentos/*.anmy /media/usb/backup/
    ```
 
 4. **Verificar encriptación**
    ```bash
    # El archivo debe ser binario/data
-   file ~/Documentos/Confidencial.klskv
+   file ~/Documentos/Confidencial.anmy
    # Salida: data
    ```
 
