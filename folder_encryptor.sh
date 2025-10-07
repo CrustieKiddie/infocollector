@@ -19,7 +19,7 @@ readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly CONFIG_DIR="${HOME}/.folder_encryptor"
 readonly ENCRYPTED_LIST="${CONFIG_DIR}/encrypted_folders.list"
 readonly LOG_FILE="${CONFIG_DIR}/encryption.log"
-readonly EXTENSION=".klskv"
+readonly EXTENSION=".anmy"
 readonly ENCRYPTION_ALGO="aes-256-cbc"
 readonly PBKDF2_ITERATIONS=100000
 
@@ -383,7 +383,7 @@ interactive_mode() {
                 ;;
             2)
                 echo
-                read -p "Enter encrypted file path (.klskv): " enc_file
+                read -p "Enter encrypted file path (.anmy): " enc_file
                 read -s -p "Enter password: " password
                 echo
                 
@@ -458,7 +458,7 @@ Professional folder encryption system using OpenSSL AES-256-CBC
 
 COMMANDS:
     encrypt <folder>              Encrypt a folder
-    decrypt <file.klskv>          Decrypt an encrypted file
+    decrypt <file.anmy>          Decrypt an encrypted file
     list                          List all encrypted folders
     interactive                   Launch interactive menu
 
@@ -470,14 +470,14 @@ OPTIONS:
 
 EXAMPLES:
     ${SCRIPT_NAME} encrypt /path/to/folder
-    ${SCRIPT_NAME} decrypt /path/to/folder.klskv
+    ${SCRIPT_NAME} decrypt /path/to/folder.anmy
     ${SCRIPT_NAME} list
     ${SCRIPT_NAME} interactive
 
 SECURITY NOTES:
     - Uses AES-256-CBC encryption with PBKDF2 (100,000 iterations)
     - Passwords are never stored, only used for encryption/decryption
-    - Encrypted files have .klskv extension
+    - Encrypted files have .anmy extension
     - Always use strong passwords for maximum security
 
 EOF
